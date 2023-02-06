@@ -16,7 +16,7 @@ namespace Calculadora
 
         public ArrayList numeros = new ArrayList();
        public static double numero1 = 0, numero2=0;
-        public static char op;
+        public static string op;
        
         protected void Page_Load(object sender, EventArgs e)
         {
@@ -70,12 +70,12 @@ namespace Calculadora
         {
             
            
-          
+            numero1 = Convert.ToDouble(Label1.Text) ;
             
           
             act("+");
-            op= '+';
-            
+            op= "+";
+             Label1.Text= "";
 
            
 
@@ -136,35 +136,35 @@ namespace Calculadora
 
         protected void Button8_Click(object sender, EventArgs e)
         {
-          
+            numero1 = Convert.ToDouble(Label1.Text);
 
 
             act("-");
-            op = '-';
-         
+            op = "-";
+            Label1.Text = "";
 
         }
 
         protected void Button4_Click(object sender, EventArgs e)
         {
-          
+            numero1 = Convert.ToDouble(Label1.Text);
 
 
             act("x");
-            op = 'x';
-           
+            op = "*";
+            Label1.Text = "";
 
         }
 
         protected void Button10_Click(object sender, EventArgs e)
         {
           
-             
+              numero1 = Convert.ToDouble(Label1.Text);
 
 
             act("÷");
-            op = '÷';
-           
+            op = "/";
+            Label1.Text = "";
         }
 
         protected void Button16_Click(object sender, EventArgs e)
@@ -175,52 +175,28 @@ namespace Calculadora
         protected void Button18_Click(object sender, EventArgs e)
         {
 
-            if (Label1.Text.Contains(op))
+            numero2 = Convert.ToDouble(Label1.Text);
+           switch (op)
             {
-                double rsl = 0;
 
 
-                var operacion = Label1.Text.Split(op).Select(double.Parse).ToList();
+                case "+":
+                    Label1.Text = Convert.ToString(numero1 + numero2);
+                    break;
+                case "-":
+                    Label1.Text = Convert.ToString(numero1 - numero2);
+                    break;
+                case "*":
+                    Label1.Text = Convert.ToString(numero1 * numero2);
+                    break;
+                case "/":
+                    Label1.Text = Convert.ToString(numero1 / numero2);
+                    break;
+                default:
 
-                foreach (var calc in operacion)
-                {
-                    
+                    break;
 
-                    switch (op)
-                    {
-
-
-                        case '+':
-                            rsl = rsl+calc;
-                            Label1.Text = "";
-                            Label1.Text = Convert.ToString(rsl);
-
-                            break;
-                        case '-':
-                              
-                            break;
-                        case 'x':
-                            
-                           rsl= rsl * calc;
-
-                          
-                            Label1.Text = Convert.ToString(rsl);
-                            break;
-                        case '÷':
-                            rsl = (rsl/calc);
-                            Label1.Text = "";
-                            Label1.Text = rsl.ToString();
-                            break;
-                        default:
-                            Label1.Text = "Error";
-                            break;
-
-                    }
-                  
-                }
-               
             }
-           
            
          
         }
