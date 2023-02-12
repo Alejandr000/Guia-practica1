@@ -1,0 +1,6 @@
+C:\Users\doubl\Documents\C# 2023\PracticaCapas\CapaAccesoDatos\bin\Debug\CapaAccesoDatos.dll
+C:\Users\doubl\Documents\C# 2023\PracticaCapas\CapaAccesoDatos\bin\Debug\CapaAccesoDatos.pdb
+C:\Users\doubl\Documents\C# 2023\PracticaCapas\CapaAccesoDatos\obj\Debug\CapaAccesoDatos.csproj.AssemblyReference.cache
+C:\Users\doubl\Documents\C# 2023\PracticaCapas\CapaAccesoDatos\obj\Debug\CapaAccesoDatos.csproj.CoreCompileInputs.cache
+C:\Users\doubl\Documents\C# 2023\PracticaCapas\CapaAccesoDatos\obj\Debug\CapaAccesoDatos.dll
+C:\Users\doubl\Documents\C# 2023\PracticaCapas\CapaAccesoDatos\obj\Debug\CapaAccesoDatos.pdb
